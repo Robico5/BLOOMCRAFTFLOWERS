@@ -1,94 +1,128 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flori din Săpun</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flori din Săpun</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #faf3e0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 20px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #faf3e0;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
+        h1 {
+            font-size: 28px;
+            color: #9b2d20;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Georgia', serif;
+            margin-bottom: 20px;
+        }
 
-.container {
-    width: 85%;
-    max-width: 1000px;
-    margin: 20px auto;
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
+        .caligrafie {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
 
-.logo {
-    width: 300px;
-    margin-top: 20px;
-}
+        .contact-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #FFD700;
+            margin-top: 20px;
+        }
 
-.galerie {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin: 40px 0;
-}
+        .logo {
+            width: 350px;
+            height: auto;
+            margin-bottom: 30px;
+        }
 
-.galerie img {
-    width: 250px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
+        .galerie {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
 
-.galerie img:hover {
-    transform: scale(1.05);
-}
+        .galerie img {
+            width: 250px;
+            height: auto;
+            border-radius: 8px;
+        }
 
-button {
-    background: white;
-    border: 2px solid #8B0000;
-    color: #8B0000;
-    padding: 10px 20px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        button {
+            background-color: #ffffff;
+            color: #8B0000;
+            border: 2px solid #8B0000;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
 
-button:hover {
-    background: #8B0000;
-    color: white;
-}
-</style>
+        button:hover {
+            background-color: #8B0000;
+            color: #ffffff;
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- LOGO -->
-<img src="buchet11.jpg" class="logo" alt="Logo">
+    <!-- LOGO -->
+    <img src="buchet 11.jpg" alt="Logo" class="logo">
 
-<div class="container">
-<h1>Buchete din flori de săpun</h1>
-<p>Frumusețe care nu se ofilește niciodată 💖</p>
-</div>
+    <!-- DESCRIERE -->
+    <div class="container">
+        <h1>🌹 Buchetele din flori de săpun – O simfonie a frumuseții eterne 🌹</h1>
 
-<h1>Galerie</h1>
+        <p class="caligrafie">
+            Florile de săpun sunt mai mult decât un cadou. Ele păstrează frumusețea și eleganța pentru mult timp.
+        </p>
 
-<div class="galerie">
-<img src="poza1.jpg" alt="Poza 1">
-<img src="poza4.jpg" alt="Poza 4">
-<img src="floare1.jpg" alt="Floare 1">
-</div>
+        <p class="caligrafie">
+            ✔ Nu se ofilesc  
+            ✔ Sunt realizate manual  
+            ✔ Au parfum delicat  
+            ✔ Cadoul perfect pentru orice ocazie
+        </p>
 
-<br>
+        <p class="contact-text">
+            Alege un buchet de săpun pentru a dărui un zâmbet care nu se va șterge niciodată! 💖
+        </p>
+    </div>
 
-<a href="https://wa.me/40726826927" target="_blank">
-<button>Comandă pe WhatsApp</button>
-</a>
+    <!-- GALERIE -->
+    <h1>Galeria mea de poze</h1>
+
+    <div class="galerie">
+        <img src="poza1.jpg.jpg" alt="Poza 1">
+        <img src="poza4.jpg.jpg" alt="Poza 4">
+    </div>
+
+    <a href="https://wa.me/40726826927" target="_blank">
+        <button>Comandă pe WhatsApp</button>
+    </a>
 
 </body>
 </html>
