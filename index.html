@@ -1,232 +1,186 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flori din Săpun</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #faf3e0;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            flex-direction: column;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flori din Săpun</title>
 
-        .container {
-            width: 80%;
-            max-width: 900px;
-            margin: 20px;
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        h1 {
-            font-size: 28px;
-            color: #9b2d20;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-family: 'Georgia', serif;
-            margin-bottom: 20px;
-        }
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #faf3e0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
 
-        .caligrafie {
-            font-family: 'Great Vibes', cursive;
-            font-size: 20px;
-            color: #1e90ff;
-            margin-top: 30px;
-            text-shadow: 2px 2px 5px rgba(30, 144, 255, 0.6);
-            transition: color 0.3s, text-shadow 0.3s;
-        }
+.container {
+    width: 85%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
-        .caligrafie:hover {
-            color: #4682b4;
-            text-shadow: 2px 2px 10px rgba(70, 130, 180, 0.8);
-        }
+h1 {
+    color: #8B0000;
+}
 
-        .contact-text {
-            font-size: 18px;
-            font-family: 'Georgia', serif;
-            font-weight: bold;
-            color: #FFD700;
-            margin-top: 30px;
-            text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.7);
-            transition: color 0.3s, text-shadow 0.3s;
-        }
+.logo {
+    width: 300px;
+    margin-top: 20px;
+}
 
-        .contact-text:hover {
-            color: #ffcc00;
-            text-shadow: 2px 2px 15px rgba(255, 215, 0, 1);
-        }
+.caligrafie {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
 
-        .instagram-link {
-            text-decoration: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-        }
+.contact-text {
+    font-weight: bold;
+    color: #d4af37;
+    font-size: 20px;
+}
 
-        .instagram-link span {
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-            margin-left: 10px;
-        }
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
-        .logo {
-            width: 350px;
-            height: auto;
-            margin-bottom: 30px;
-        }
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
 
-        button {
-            background-color: #ffffff;
-            color: #8B0000;
-            border: 2px solid #8B0000;
-            padding: 12px 25px;
-            border-radius: 5px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-        }
+th {
+    background-color: #f2f2f2;
+}
 
-        button:hover {
-            background-color: #8B0000;
-            color: #ffffff;
-        }
+.produse {
+    margin: 40px 0;
+}
 
-        .galerie img {
-            width: 250px;
-            height: auto;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-            transition: transform 0.3s;
-            margin-bottom: 20px;
-        }
+.produs {
+    margin-bottom: 30px;
+}
 
-        .galerie img:hover {
-            transform: scale(1.1);
-            border-color: #333;
-        }
+.produs img {
+    width: 250px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
 
-        table {
-            width: 50%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            font-family: Arial, sans-serif;
-            margin-bottom: 30px;
-        }
+button {
+    background: white;
+    border: 2px solid #8B0000;
+    color: #8B0000;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-        th, td {
-            padding: 8px 12px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
+button:hover {
+    background: #8B0000;
+    color: white;
+}
 
-        th {
-            background-color: #f2f2f2;
-        }
+.galerie {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
 
-        tr:hover {
-            background-color: #f1f1f1;
-        }
+.galerie img {
+    width: 250px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
 
-        .produs img {
-            width: 250px;
-            height: auto;
-            margin-bottom: 10px;
-            border-radius: 8px;
-        }
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+.galerie img:hover {
+    transform: scale(1.05);
+}
+
+.instagram-link {
+    margin-bottom: 40px;
+}
+
+.instagram-link a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+</style>
 </head>
+
 <body>
 
-    <!-- Logo -->
-    <img src="poza logo.jpg" alt="Logo" class="logo">
+<img src="pozalogo.jpg" class="logo" alt="Logo">
 
-    <!-- Text și descriere -->
-    <div class="container">
-        <h1>🌹 Buchetele din flori de săpun – O simfonie a frumuseții eterne 🌹</h1>
-        <p class="caligrafie">Într-o lume în care totul se schimbă, florile de săpun rămân o mărturie a eleganței care nu se ofilește niciodată. Ele sunt mai mult decât un simplu cadou; sunt o promisiune a unei amintiri care durează, păstrându-și prospețimea și parfumul delicat timp de ani de zile.</p>
-        <p class="caligrafie">✨ De ce să alegi farmecul lor fără sfârșit? ✨</p>
-        <p class="caligrafie"><strong>Frumusețe Eternă:</strong> Spre deosebire de florile naturale, trandafirii din săpun nu necesită apă, nu se ofilesc și rămân impecabili, fiind decorațiuni de durată pentru căminul tău.</p>
-        <p class="caligrafie"><strong>Artă Handmade:</strong> Fiecare buchet este realizat manual, cu o atenție sporită la detalii, oferind o textură fină și un aspect surprinzător de real.</p>
-        <p class="caligrafie"><strong>Parfum Delicat:</strong> Aceste flori emană un parfum subtil, plăcut, capabil să transforme atmosfera oricărei încăperi într-un colț de relaxare.</p>
-        <p class="caligrafie"><strong>Cadoul Ideal:</strong> Sunt alegerea perfectă pentru a surprinde persoanele dragi la orice ocazie – aniversări, Ziua Îndrăgostiților sau Ziua Mamei – fiind un simbol al pasiunii și rafinamentului.</p>
-        <p class="contact-text">Alege un buchet de săpun pentru a dărui un zâmbet care nu se va șterge niciodată! 💖💐</p>
-    </div>
+<div class="container">
+<h1>🌹 Buchetele din flori de săpun 🌹</h1>
 
-    <!-- Tabel cu prețuri -->
-    <div class="container">
-        <h1>Listă de Prețuri</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Produs</th>
-                    <th>Preț</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>7 Trandafiri</td>
-                    <td>70 RON</td>
-                </tr>
-                <tr>
-                    <td>11 Trandafiri</td>
-                    <td>90 RON</td>
-                </tr>
-                <tr>
-                    <td>19 Trandafiri</td>
-                    <td>130 RON</td>
-                </tr>
-                <tr>
-                    <td>101 Trandafiri</td>
-                    <td>300 RON</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<p class="caligrafie">
+Frumusețe eternă, parfum delicat și eleganță care nu se ofilește niciodată.
+</p>
 
-    <!-- Produse + WhatsApp -->
-    <div class="produse">
-        <div class="produs">
-            <i class="fab fa-whatsapp" style="font-size:60px;color:#25D366;"></i>
-            <a href="https://wa.me/40726826927" target="_blank">
-                <button>Comandă pe WhatsApp</button>
-            </a>
-        </div>
-        <div class="produs">
-            <img src="floare2.jpg" alt="Floare 2">
-            <a href="https://wa.me/40726826927" target="_blank">
-                <button>Comandă pe WhatsApp</button>
-            </a>
-        </div>
-    </div>
+<p class="contact-text">
+Alege un buchet de săpun pentru a dărui un zâmbet care nu se va șterge niciodată! 💖
+</p>
+</div>
 
-    <!-- Galerie imagini -->
-    <h1>Galeria mea de poze</h1>
-    <div class="galerie">
-        <img src="poza1.jpg" alt="Poza 1">
-        <img src="poza4.jpg" alt="Poza 4">
-    </div>
+<div class="container">
+<h1>Listă de Prețuri</h1>
 
-    <!-- Instagram Link -->
-    <div class="instagram-link">
-        <a href="https://www.instagram.com/bloomcraft_flowers__gifts?igsh=cWwxaTRzMGxvYWM5" target="_blank">
-            <i class="fab fa-instagram" style="font-size:60px;color:#E1306C;"></i>
-            <span>Vizitează-ne pe Instagram!</span>
-        </a>
-    </div>
+<table>
+<tr><th>Produs</th><th>Preț</th></tr>
+<tr><td>7 Trandafiri</td><td>70 RON</td></tr>
+<tr><td>11 Trandafiri</td><td>90 RON</td></tr>
+<tr><td>19 Trandafiri</td><td>130 RON</td></tr>
+<tr><td>101 Trandafiri</td><td>300 RON</td></tr>
+</table>
+</div>
+
+<div class="produse">
+
+<div class="produs">
+<i class="fab fa-whatsapp" style="font-size:60px;color:#25D366;"></i>
+<br><br>
+<a href="https://wa.me/40726826927" target="_blank">
+<button>Comandă pe WhatsApp</button>
+</a>
+</div>
+
+<div class="produs">
+<img src="floare2.jpg" alt="Floare 2">
+<br>
+<a href="https://wa.me/40726826927" target="_blank">
+<button>Comandă pe WhatsApp</button>
+</a>
+</div>
+
+</div>
+
+<h1>Galeria mea de poze</h1>
+
+<div class="galerie">
+<img src="poza1.jpg" alt="Poza 1">
+<img src="poza4.jpg" alt="Poza 4">
+</div>
+
+<div class="instagram-link">
+<a href="https://www.instagram.com/bloomcraft_flowers__gifts?igsh=cWwxaTRzMGxvYWM5" target="_blank">
+<i class="fab fa-instagram" style="font-size:60px;color:#E1306C;"></i>
+<br>
+Vizitează-ne pe Instagram!
+</a>
+</div>
+
 </body>
 </html>
