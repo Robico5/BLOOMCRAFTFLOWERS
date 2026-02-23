@@ -26,52 +26,27 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-h1 {
-    color: #8B0000;
-}
-
 .logo {
     width: 300px;
     margin-top: 20px;
 }
 
-.caligrafie {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-.contact-text {
-    font-weight: bold;
-    color: #d4af37;
-    font-size: 20px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-.produse {
+.galerie {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
     margin: 40px 0;
 }
 
-.produs {
-    margin-bottom: 30px;
-}
-
-.produs img {
+.galerie img {
     width: 250px;
     border-radius: 10px;
-    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.galerie img:hover {
+    transform: scale(1.05);
 }
 
 button {
@@ -88,99 +63,32 @@ button:hover {
     background: #8B0000;
     color: white;
 }
-
-.galerie {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-}
-
-.galerie img {
-    width: 250px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.galerie img:hover {
-    transform: scale(1.05);
-}
-
-.instagram-link {
-    margin-bottom: 40px;
-}
-
-.instagram-link a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
 </style>
 </head>
 
 <body>
 
-<img src="pozalogo.jpg" class="logo" alt="Logo">
+<!-- LOGO -->
+<img src="buchet11.jpg" class="logo" alt="Logo">
 
 <div class="container">
-<h1>🌹 Buchetele din flori de săpun 🌹</h1>
-
-<p class="caligrafie">
-Frumusețe eternă, parfum delicat și eleganță care nu se ofilește niciodată.
-</p>
-
-<p class="contact-text">
-Alege un buchet de săpun pentru a dărui un zâmbet care nu se va șterge niciodată! 💖
-</p>
+<h1>Buchete din flori de săpun</h1>
+<p>Frumusețe care nu se ofilește niciodată 💖</p>
 </div>
 
-<div class="container">
-<h1>Listă de Prețuri</h1>
-
-<table>
-<tr><th>Produs</th><th>Preț</th></tr>
-<tr><td>7 Trandafiri</td><td>70 RON</td></tr>
-<tr><td>11 Trandafiri</td><td>90 RON</td></tr>
-<tr><td>19 Trandafiri</td><td>130 RON</td></tr>
-<tr><td>101 Trandafiri</td><td>300 RON</td></tr>
-</table>
-</div>
-
-<div class="produse">
-
-<div class="produs">
-<i class="fab fa-whatsapp" style="font-size:60px;color:#25D366;"></i>
-<br><br>
-<a href="https://wa.me/40726826927" target="_blank">
-<button>Comandă pe WhatsApp</button>
-</a>
-</div>
-
-<div class="produs">
-<img src="floare2.jpg" alt="Floare 2">
-<br>
-<a href="https://wa.me/40726826927" target="_blank">
-<button>Comandă pe WhatsApp</button>
-</a>
-</div>
-
-</div>
-
-<h1>Galeria mea de poze</h1>
+<h1>Galerie</h1>
 
 <div class="galerie">
 <img src="poza1.jpg" alt="Poza 1">
 <img src="poza4.jpg" alt="Poza 4">
+<img src="floare1.jpg" alt="Floare 1">
 </div>
 
-<div class="instagram-link">
-<a href="https://www.instagram.com/bloomcraft_flowers__gifts?igsh=cWwxaTRzMGxvYWM5" target="_blank">
-<i class="fab fa-instagram" style="font-size:60px;color:#E1306C;"></i>
 <br>
-Vizitează-ne pe Instagram!
+
+<a href="https://wa.me/40726826927" target="_blank">
+<button>Comandă pe WhatsApp</button>
 </a>
-</div>
 
 </body>
 </html>
