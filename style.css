@@ -149,3 +149,9 @@ footer {
         font-size: 12px;
     }
 }
+.comment-box {
+    max-height: 120px;
+    overflow-y: auto;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
