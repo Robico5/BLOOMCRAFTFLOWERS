@@ -180,6 +180,121 @@ Alege un buchet de săpun pentru a dărui un zâmbet care nu se va șterge nicio
 
 
 
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review Clienți</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#fff0f5;
+    padding:40px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+h2{
+    text-align:center;
+    color:#d63384;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+}
+
+button{
+    margin-top:10px;
+    padding:12px;
+    width:100%;
+    background:#d63384;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#b0256b;
+}
+
+.stars{
+    font-size:26px;
+    cursor:pointer;
+    color:#ccc;
+}
+
+.stars span.active{
+    color:gold;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:25px;
+}
+
+th{
+    background:#d63384;
+    color:white;
+    padding:10px;
+}
+
+td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+}
+
+tr:hover{
+    background:#ffe4ec;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>🌸 Review Clienți</h2>
+
+<input id="name" placeholder="Nume client">
+
+<div class="stars" id="stars">
+<span data-value="1">★</span>
+<span data-value="2">★</span>
+<span data-value="3">★</span>
+<span data-value="4">★</span>
+<span data-value="5">★</span>
+</div>
+
+<textarea id="comment" placeholder="Comentariu"></textarea>
+
+<button onclick="addReview()">Adaugă Review</button>
+
+<table>
+<thead>
+<tr>
+<th>Nume</th>
+<th>Rating</th>
+<th>Comentariu</th>
+</tr>
+</thead>
+
+<tbody id="reviewTable"></tbody>
+</table>
+
+</div>
+
 <script type="module">
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
@@ -191,8 +306,7 @@ const firebaseConfig = {
   projectId: "review-florarie",
   storageBucket: "review-florarie.firebasestorage.app",
   messagingSenderId: "427118254866",
-  appId: "1:427118254866:web:af8f013dd7367e1dc6b1cb",
-  measurementId: "G-1L9E5T8QFJ"
+  appId: "1:427118254866:web:af8f013dd7367e1dc6b1cb"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -201,8 +315,8 @@ const db = getFirestore(app);
 let rating = 0;
 const stars = document.querySelectorAll("#stars span");
 
-stars.forEach(star => {
-    star.onclick = () => {
+stars.forEach(star=>{
+    star.onclick=()=>{
         rating = star.dataset.value;
         updateStars();
     }
@@ -228,7 +342,7 @@ if(name=="" || comment=="" || rating==0){
 
 await addDoc(collection(db, "reviews"), {
     name: name,
-    rating: rating,
+    rating: Number(rating),
     comment: comment
 });
 
@@ -264,3 +378,6 @@ querySnapshot.forEach((doc)=>{
 showReviews();
 
 </script>
+
+</body>
+</html>
