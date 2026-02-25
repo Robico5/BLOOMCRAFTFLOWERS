@@ -186,3 +186,35 @@ footer {
         font-size: 12px;
     }
 }
+/* ===== TABEL PRETURI CARD MODERN ===== */
+.preturi {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 30px auto;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.preturi th {
+    background: linear-gradient(135deg, #f8c8d8, #f9b9d8);
+    color: white;
+    padding: 15px;
+    font-size: 17px;
+}
+
+.preturi td {
+    padding: 14px;
+    font-size: 15px;
+}
+
+.preturi tr:nth-child(even) td {
+    background-color: #fff5f8;
+}
+
+.preturi tr:hover td {
+    background-color: #ffe4ec;
+    transition: 0.3s;
+}
