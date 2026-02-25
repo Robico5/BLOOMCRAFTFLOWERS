@@ -106,4 +106,18 @@ footer {
 /* Culoare la hover */
 .whatsapp-button:hover {
     background-color: #D50000; /* roșu mai închis */
+
+}
+table {
+    width:100%;
+    border-collapse:collapse;
+    margin-top:25px;
+    table-layout: fixed;
+}
+
+td {
+    padding:10px;
+    border-bottom:1px solid #ddd;
+    word-break: break-word;
+    max-width: 200px;
 }
