@@ -400,50 +400,7 @@ const firebaseConfig = {
   measurementId: "G-1L9E5T8QFJ"
 };
 
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
 
-let rating = 0;
-const stars = document.querySelectorAll("#stars span");
-
-stars.forEach(star => {
-    star.onclick = () => {
-        rating = star.dataset.value;
-        updateStars();
-    }
-});
-
-function updateStars(){
-    stars.forEach(star=>{
-        star.classList.remove("active");
-        if(star.dataset.value <= rating)
-            star.classList.add("active");
-    });
-}
-
-window.addReview = async function(){
-
-let name = document.getElementById("name").value.trim();
-let comment = document.getElementById("comment").value.trim();
-
-if(name=="" || comment=="" || rating==0){
-    alert("Completează toate câmpurile!");
-    return;
-}
-
-await addDoc(collection(db, "reviews"), {
-    name: name,
-    rating: rating,
-    comment: comment
-});
-
-document.getElementById("name").value="";
-document.getElementById("comment").value="";
-rating=0;
-updateStars();
-
-showReviews();
-}
 
 async function showReviews(){
 
@@ -598,6 +555,7 @@ showReviews();
 </script>
 </body>
 </html>
+
 
 
 
