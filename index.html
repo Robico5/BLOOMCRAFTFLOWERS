@@ -368,7 +368,7 @@ querySnapshot.forEach((doc)=>{
     <tr>
         <td>${r.name}</td>
         <td>${"⭐".repeat(r.rating)}</td>
-        <td>${r.comment}</td>
+        <td><div class="comment-box">${r.comment}</div></td>
     </tr>
     `;
 });
@@ -381,3 +381,4 @@ showReviews();
 
 </body>
 </html>
+
