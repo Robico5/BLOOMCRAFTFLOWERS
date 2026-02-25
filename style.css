@@ -65,6 +65,7 @@ button {
     cursor: pointer;
     font-weight: bold;
     width: 100%;
+    transition: 0.3s;
 }
 
 button:hover {
@@ -87,8 +88,42 @@ button:hover {
     background-color: #D50000;
 }
 
-/* TABEL REVIEWURI */
-table {
+/* ===== TABEL PRETURI CARD MODERN ===== */
+/* afectează doar primul tabel (lista de prețuri) */
+.container table:first-of-type {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    background: white;
+    margin: 30px auto;
+}
+
+.container table:first-of-type th {
+    background: linear-gradient(135deg, #f8c8d8, #f9b9d8);
+    color: white;
+    padding: 15px;
+    font-size: 17px;
+}
+
+.container table:first-of-type td {
+    padding: 14px;
+    font-size: 15px;
+}
+
+.container table:first-of-type tr:nth-child(even) td {
+    background-color: #fff5f8;
+}
+
+.container table:first-of-type tr:hover td {
+    background-color: #ffe4ec;
+    transition: 0.3s;
+}
+
+/* ===== TABEL REVIEWURI (rămâne simplu) ===== */
+.review-section table,
+#reviewTable {
     width: 100%;
     border-collapse: collapse;
     margin: 30px auto;
@@ -96,22 +131,23 @@ table {
     background: white;
 }
 
-th {
+#reviewTable th {
     background: #f8c8d8;
     color: white;
     padding: 10px;
 }
 
-th, td {
+#reviewTable th,
+#reviewTable td {
     border-bottom: 1px solid #ddd;
     padding: 8px;
     word-break: break-word;
     overflow-wrap: break-word;
 }
 
-td:nth-child(1) { width: 20%; }
-td:nth-child(2) { width: 20%; }
-td:nth-child(3) { width: 60%; }
+#reviewTable td:nth-child(1) { width: 20%; }
+#reviewTable td:nth-child(2) { width: 20%; }
+#reviewTable td:nth-child(3) { width: 60%; }
 
 /* FOOTER */
 footer {
@@ -140,48 +176,13 @@ footer {
         max-width: 300px;
     }
 
-    th, td {
+    #reviewTable th,
+    #reviewTable td {
         font-size: 13px;
         padding: 6px;
     }
 
-    td:nth-child(3) {
+    #reviewTable td:nth-child(3) {
         font-size: 12px;
     }
-}
-.comment-box {
-    max-height: 120px;
-    overflow-y: auto;
-    word-break: break-word;
-    overflow-wrap: break-word;
-}
-
-#reviewsContainer{
-    max-width:600px;
-    margin:30px auto;
-    padding:10px;
-}
-
-.review-card{
-    background:white;
-    padding:15px;
-    margin-bottom:15px;
-    border-radius:12px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    text-align:left;
-}
-
-.review-name{
-    font-weight:bold;
-    color:#f8c8d8;
-    font-size:16px;
-}
-
-.review-rating{
-    margin:5px 0;
-}
-
-.review-comment{
-    font-size:14px;
-    word-break:break-word;
 }
