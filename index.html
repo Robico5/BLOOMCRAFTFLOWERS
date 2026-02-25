@@ -385,8 +385,92 @@ showReviews();
 </head>
 <body>
 
+<script type="module">
 
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCJIpjxbpyzPkHAz7urRNa25YKppBWMFUc",
+  authDomain: "review-florarie.firebaseapp.com",
+  projectId: "review-florarie",
+  storageBucket: "review-florarie.firebasestorage.app",
+  messagingSenderId: "427118254866",
+  appId: "1:427118254866:web:af8f013dd7367e1dc6b1cb",
+  measurementId: "G-1L9E5T8QFJ"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+let rating = 0;
+const stars = document.querySelectorAll("#stars span");
+
+stars.forEach(star => {
+    star.onclick = () => {
+        rating = star.dataset.value;
+        updateStars();
+    }
+});
+
+function updateStars(){
+    stars.forEach(star=>{
+        star.classList.remove("active");
+        if(star.dataset.value <= rating)
+            star.classList.add("active");
+    });
+}
+
+window.addReview = async function(){
+
+let name = document.getElementById("name").value.trim();
+let comment = document.getElementById("comment").value.trim();
+
+if(name=="" || comment=="" || rating==0){
+    alert("Completează toate câmpurile!");
+    return;
+}
+
+await addDoc(collection(db, "reviews"), {
+    name: name,
+    rating: rating,
+    comment: comment
+});
+
+document.getElementById("name").value="";
+document.getElementById("comment").value="";
+rating=0;
+updateStars();
+
+showReviews();
+}
+
+async function showReviews(){
+
+let table=document.getElementById("reviewTable");
+table.innerHTML="";
+
+const querySnapshot = await getDocs(collection(db, "reviews"));
+
+querySnapshot.forEach((doc)=>{
+    const r = doc.data();
+
+    table.innerHTML+=`
+    <tr>
+        <td>${r.name}</td>
+        <td>${"⭐".repeat(r.rating)}</td>
+        <td>${r.comment}</td>
+    </tr>
+    `;
+});
+
+}
+
+showReviews();
+
+</script>
 </body>
 </html>
+
 
 
