@@ -23,11 +23,11 @@ body{
 }
 
 .container{
-    width:90%;
+    width:80%;
     max-width:900px;
     margin:30px auto;
     background:white;
-    padding:30px;
+    padding:35px;
     border-radius:12px;
     box-shadow:0 6px 15px rgba(0,0,0,0.1);
 }
@@ -37,22 +37,36 @@ h1{ color:#8B0000; }
 .descriere{
     font-family:'Playfair Display', serif;
     color:#00a8b5;
-    font-size:20px;
-    line-height:1.8;
+    font-size:22px;
+    line-height:1.9;
 }
 
 .contact-text{
     font-family:'Playfair Display', serif;
     font-weight:600;
     color:#008c95;
-    font-size:22px;
+    font-size:23px;
 }
 
-/* GALERIE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th, td{
+    border:1px solid #ddd;
+    padding:12px;
+}
+
+th{
+    background:#f2f2f2;
+}
+
 .galerie{
     display:flex;
     justify-content:center;
-    gap:20px;
+    gap:25px;
     flex-wrap:wrap;
     margin:40px 0;
 }
@@ -62,7 +76,6 @@ h1{ color:#8B0000; }
     border-radius:12px;
 }
 
-/* BUTON */
 button{
     background:white;
     border:2px solid #8B0000;
@@ -72,7 +85,7 @@ button{
     font-weight:bold;
     border-radius:6px;
     cursor:pointer;
-    margin-top:15px;
+    margin-bottom:20px;
 }
 
 button:hover{
@@ -80,35 +93,33 @@ button:hover{
     color:white;
 }
 
-/* REVIEW CARD DESIGN */
-#reviewsContainer{
-    max-width:600px;
-    margin:30px auto;
+.instagram{
+    margin:30px 0;
+    font-size:20px;
 }
 
-.review-card{
-    background:white;
-    padding:15px;
-    margin-bottom:15px;
-    border-radius:12px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    text-align:left;
-}
-
-.review-name{
+.instagram a{
+    text-decoration:none;
+    color:#E1306C;
     font-weight:bold;
-    color:#d63384;
 }
 
-.review-rating{
-    margin:5px 0;
+.instagram i{
+    font-size:40px;
+    margin-right:10px;
 }
 
-.review-comment{
-    word-break:break-word;
+/* REVIEW */
+.review-section{
+    width:80%;
+    max-width:900px;
+    margin:30px auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
-/* STELE */
 .stars{
     font-size:26px;
     cursor:pointer;
@@ -117,12 +128,6 @@ button:hover{
 
 .stars span.active{
     color:gold;
-}
-
-/* RESPONSIVE */
-@media(max-width:600px){
-    .logo{ width:250px; }
-    .descriere{ font-size:17px; }
 }
 </style>
 </head>
@@ -135,7 +140,7 @@ button:hover{
 <h1>🌹 Buchetele din flori de săpun – O simfonie a frumuseții eterne 🌹</h1>
 
 <p class="descriere">
-Florile de săpun rămân o mărturie a eleganței care nu se ofilește niciodată.
+Într-o lume în care totul se schimbă, florile de săpun rămân o mărturie a eleganței care nu se ofilește niciodată.
 </p>
 
 <p class="contact-text">
@@ -144,9 +149,39 @@ Alege un buchet de săpun pentru a dărui un zâmbet care nu se va șterge nicio
 </div>
 
 <div class="container">
-<h1>Lasă un Review</h1>
+<h1>Listă de Prețuri</h1>
+<table>
+<tr><th>Produs</th><th>Preț</th></tr>
+<tr><td>7 Trandafiri</td><td>70 RON</td></tr>
+<tr><td>11 Trandafiri</td><td>90 RON</td></tr>
+<tr><td>19 Trandafiri</td><td>130 RON</td></tr>
+<tr><td>101 Trandafiri</td><td>300 RON</td></tr>
+</table>
+</div>
 
-<input id="name" placeholder="Nume client">
+<h1>Galeria mea de poze</h1>
+
+<div class="galerie">
+<img src="poza1.jpg.jpg" alt="Poza 1">
+<img src="poza4.jpg.jpg" alt="Poza 4">
+</div>
+
+<a href="https://wa.me/40726826927" target="_blank">
+<button>Comandă pe WhatsApp</button>
+</a>
+
+<div class="instagram">
+<a href="https://www.instagram.com/bloomcraft_flowers__gifts?igsh=cWwxaTRzMGxvYWM5" target="_blank">
+<i class="fab fa-instagram"></i> Urmărește-ne pe Instagram
+</a>
+</div>
+
+<!-- REVIEW SECTION -->
+<div class="review-section">
+
+<h2>🌸 Review Clienți</h2>
+
+<input id="name" placeholder="Nume client" style="width:100%;padding:10px;margin-top:10px;">
 
 <div class="stars" id="stars">
 <span data-value="1">★</span>
@@ -160,7 +195,14 @@ Alege un buchet de săpun pentru a dărui un zâmbet care nu se va șterge nicio
 
 <button onclick="addReview()">Trimite Review</button>
 
-<div id="reviewsContainer"></div>
+<table id="reviewTable">
+<tr>
+<th>Nume</th>
+<th>Rating</th>
+<th>Comentariu</th>
+</tr>
+</table>
+
 </div>
 
 <script type="module">
@@ -168,7 +210,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/fireba
 import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSy...",
+  apiKey: "PUNE_API_KEY_AICI",
   authDomain: "review-florarie.firebaseapp.com",
   projectId: "review-florarie",
   storageBucket: "review-florarie.firebasestorage.app",
@@ -222,18 +264,26 @@ showReviews();
 }
 
 async function showReviews(){
+
+let table=document.getElementById("reviewTable");
+table.innerHTML=`
+<tr>
+<th>Nume</th>
+<th>Rating</th>
+<th>Comentariu</th>
+</tr>
+`;
+
 const querySnapshot = await getDocs(collection(db, "reviews"));
-const container = document.getElementById("reviewsContainer");
-container.innerHTML="";
 
 querySnapshot.forEach((doc)=>{
     const r = doc.data();
-    container.innerHTML+=`
-        <div class="review-card">
-            <div class="review-name">${r.name}</div>
-            <div class="review-rating">${"⭐".repeat(r.rating)}</div>
-            <div class="review-comment">${r.comment}</div>
-        </div>
+    table.innerHTML+=`
+    <tr>
+        <td>${r.name}</td>
+        <td>${"⭐".repeat(r.rating)}</td>
+        <td>${r.comment}</td>
+    </tr>
     `;
 });
 }
