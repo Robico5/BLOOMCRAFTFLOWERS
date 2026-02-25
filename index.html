@@ -279,18 +279,27 @@ tr:hover{
 
 <textarea id="comment" placeholder="Comentariu"></textarea>
 
-<button onclick="addReview()">Adaugă Review</button>
+<async function showReviews(){
 
-<table>
-<thead>
-<tr>
-<th>Nume</th>
-<th>Rating</th>
-<th>Comentariu</th>
-</tr>
-</thead>
+    const querySnapshot = await getDocs(collection(db, "reviews"));
+    const container = document.getElementById("reviewsContainer");
+    container.innerHTML = "";
 
-<tbody id="reviewTable"></tbody>
+    querySnapshot.forEach((doc) => {
+        const r = doc.data();
+
+        container.innerHTML += `
+        <div class="review-card">
+            <div class="review-name">${r.name}</div>
+            <div class="review-rating">${"⭐".repeat(r.rating)}</div>
+            <div class="review-comment">${r.comment}</div>
+        </div>
+        `;
+    });
+
+}
+
+<div id="reviewsContainer"></div>
 </table>
 
 </div>
@@ -381,4 +390,5 @@ showReviews();
 
 </body>
 </html>
+
 
