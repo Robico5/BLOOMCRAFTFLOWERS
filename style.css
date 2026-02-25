@@ -155,3 +155,33 @@ footer {
     word-break: break-word;
     overflow-wrap: break-word;
 }
+
+#reviewsContainer{
+    max-width:600px;
+    margin:30px auto;
+    padding:10px;
+}
+
+.review-card{
+    background:white;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    text-align:left;
+}
+
+.review-name{
+    font-weight:bold;
+    color:#f8c8d8;
+    font-size:16px;
+}
+
+.review-rating{
+    margin:5px 0;
+}
+
+.review-comment{
+    font-size:14px;
+    word-break:break-word;
+}
