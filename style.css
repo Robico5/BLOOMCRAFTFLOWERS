@@ -218,3 +218,58 @@ footer {
     background-color: #ffe4ec;
     transition: 0.3s;
 }
+
+/* ===== TABEL PRETURI PREMIUM ===== */
+.preturi {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(248,200,216,0.4);
+}
+
+.preturi th {
+    background: linear-gradient(135deg, #f8c8d8, #f9b9d8);
+    color: white;
+    padding: 18px;
+    font-size: 18px;
+}
+
+.preturi td {
+    padding: 18px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.preturi tr:not(:first-child):hover td {
+    background: #fff0f5;
+}
+
+.pret {
+    font-weight: bold;
+    background: linear-gradient(135deg, #f8c8d8, #f9b9d8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 18px;
+}
+
+.best-seller {
+    background: #fff5f9;
+    position: relative;
+    transform: scale(1.02);
+}
+
+.badge {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: bold;
+    background: #f8c8d8;
+    color: white;
+    border-radius: 20px;
+}
