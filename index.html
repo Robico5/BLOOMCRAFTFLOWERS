@@ -180,8 +180,6 @@ Alege un buchet de săpun pentru a dărui un zâmbet care nu se va șterge nicio
 
 
 
-</body>
-</html>
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -265,14 +263,6 @@ tr:hover{
     background:#ffe4ec;
 }
 
-.deleteBtn{
-    background:red;
-    color:white;
-    border:none;
-    padding:5px 10px;
-    cursor:pointer;
-}
-
 </style>
 </head>
 
@@ -302,8 +292,6 @@ tr:hover{
 <th>Nume</th>
 <th>Rating</th>
 <th>Comentariu</th>
-<th>Data</th>
-<th>Șterge</th>
 </tr>
 </thead>
 
@@ -347,8 +335,7 @@ let reviews=JSON.parse(localStorage.getItem("reviews"))||[];
 reviews.push({
     name,
     rating,
-    comment,
-    date:new Date().toLocaleDateString()
+    comment
 });
 
 localStorage.setItem("reviews",JSON.stringify(reviews));
@@ -361,13 +348,6 @@ updateStars();
 showReviews();
 }
 
-function deleteReview(index){
-let reviews=JSON.parse(localStorage.getItem("reviews"));
-reviews.splice(index,1);
-localStorage.setItem("reviews",JSON.stringify(reviews));
-showReviews();
-}
-
 function showReviews(){
 
 let reviews=JSON.parse(localStorage.getItem("reviews"))||[];
@@ -375,15 +355,13 @@ let table=document.getElementById("reviewTable");
 
 table.innerHTML="";
 
-reviews.forEach((r,i)=>{
+reviews.forEach((r)=>{
 
 table.innerHTML+=`
 <tr>
 <td>${r.name}</td>
 <td>${"⭐".repeat(r.rating)}</td>
 <td>${r.comment}</td>
-<td>${r.date}</td>
-<td><button class="deleteBtn" onclick="deleteReview(${i})">X</button></td>
 </tr>
 `;
 
@@ -393,6 +371,21 @@ table.innerHTML+=`
 showReviews();
 
 </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Site-ul Meu</title>
+
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+
+</head>
+<body>
+
+<h1>Bine ai venit!</h1>
 
 </body>
 </html>
