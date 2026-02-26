@@ -1,92 +1,62 @@
+<style>
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    background: linear-gradient(135deg, #f9f9f9, #f8c8d8);
-    color: #333;
+    background-color: #faf3e0;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
-/* TITLU */
-h1 {
-    background: linear-gradient(135deg, #f8c8d8, #f9b9d8);
-    color: #fff;
-    padding: 30px;
-    font-size: 2.2em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+.logo {
+    width: 350px;
+    margin-top: 30px;
 }
 
-/* PRODUSE */
-.produse {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    padding: 40px 20px;
-    background: #fff;
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-.produs {
-    background: #f9f9f9;
-    padding: 20px;
-    width: 240px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: 0.3s;
-    border: 2px solid #f8c8d8;
+h1 { color: #8B0000; }
+
+.descriere {
+    font-family: 'Playfair Display', serif;
+    color: #00a8b5;
+    font-size: 22px;
+    line-height: 1.9;
+    margin-bottom: 20px;
 }
 
-.produs:hover {
-    transform: translateY(-5px);
+.contact-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: #008c95;
+    font-size: 23px;
+    margin-top: 25px;
 }
 
-.produs img {
+/* TABEL GENERAL (pentru review) */
+table {
     width: 100%;
-    border-radius: 10px;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-.produs h3 {
-    color: #f8c8d8;
-}
-
-.produs p {
-    font-size: 1.1em;
-}
-
-/* BUTOANE */
-button {
-    background-color: #f8c8d8;
-    color: white;
-    border: none;
+th, td {
+    border: 1px solid #ddd;
     padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    width: 100%;
-    transition: 0.3s;
+    word-wrap: break-word;
 }
 
-button:hover {
-    background-color: #f9b9d8;
+th {
+    background-color: #f2f2f2;
 }
 
-/* WHATSAPP */
-.whatsapp-button {
-    display: inline-block;
-    background-color: #FF0000;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.whatsapp-button:hover {
-    background-color: #D50000;
-}
 /* ===== TABEL PRETURI BLACK & GOLD ===== */
 .preturi {
     width: 100%;
@@ -102,11 +72,13 @@ button:hover {
     background: #111;
     color: #d4af37;
     padding: 15px;
+    border: none;
 }
 
 .preturi td {
     padding: 15px;
     color: white;
+    border: none;
 }
 
 .pret {
@@ -127,114 +99,62 @@ button:hover {
     border-radius: 15px;
     margin-left: 8px;
 }
-.preturi {
-    width: 100%;
-    max-width: 600px;
-    margin: 40px auto;
-    border-collapse: separate;
-    border-spacing: 0;
-    background: #000;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+
+/* GALERIE */
+.galerie {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 40px 0;
 }
 
-.preturi th {
-    background: #111;
-    color: #d4af37;
-    padding: 18px;
+.galerie img {
+    width: 260px;
+    border-radius: 12px;
+}
+
+button {
+    background-color: white;
+    border: 2px solid #8B0000;
+    color: #8B0000;
+    padding: 12px 25px;
     font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 
-.preturi td {
-    padding: 18px;
-    font-size: 16px;
+button:hover {
+    background-color: #8B0000;
     color: white;
 }
 
-.pret {
-    font-weight: bold;
+.instagram {
+    margin: 30px 0;
     font-size: 20px;
-    color: #d4af37;
 }
 
-.badge {
-    display: inline-block;
-    margin-left: 10px;
-    padding: 4px 10px;
-    font-size: 11px;
+.instagram a {
+    text-decoration: none;
+    color: #E1306C;
     font-weight: bold;
-    background: #f8c8d8;
-    color: white;
-    border-radius: 20px;
 }
 
-/* ===== TABEL REVIEWURI ===== */
-#reviewTable {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 30px auto;
-    table-layout: fixed;
-    background: white;
+.instagram i {
+    font-size: 40px;
+    margin-right: 10px;
 }
 
-#reviewTable th {
-    background: #f8c8d8;
-    color: white;
-    padding: 10px;
+/* REVIEW */
+.stars {
+    font-size: 26px;
+    cursor: pointer;
+    color: #ccc;
 }
 
-#reviewTable th,
-#reviewTable td {
-    border-bottom: 1px solid #ddd;
-    padding: 8px;
-    word-break: break-word;
-    overflow-wrap: break-word;
+.stars span.active {
+    color: gold;
 }
-
-#reviewTable td:nth-child(1) { width: 20%; }
-#reviewTable td:nth-child(2) { width: 20%; }
-#reviewTable td:nth-child(3) { width: 60%; }
-
-/* FOOTER */
-footer {
-    background-color: #f8c8d8;
-    color: #fff;
-    padding: 20px;
-    font-size: 1em;
-    margin-top: 40px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 600px) {
-
-    h1 {
-        font-size: 1.5em;
-        padding: 20px;
-    }
-
-    .produse {
-        padding: 20px;
-        gap: 15px;
-    }
-
-    .produs {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    #reviewTable th,
-    #reviewTable td {
-        font-size: 13px;
-        padding: 6px;
-    }
-
-    #reviewTable td:nth-child(3) {
-        font-size: 12px;
-    }
-}
-section {
-    background: transparent;
-}
-
-
+</style>
