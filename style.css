@@ -87,7 +87,46 @@ button:hover {
 .whatsapp-button:hover {
     background-color: #D50000;
 }
+/* ===== TABEL PRETURI BLACK & GOLD ===== */
+.preturi {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+}
 
+.preturi th {
+    background: #111;
+    color: #d4af37;
+    padding: 15px;
+}
+
+.preturi td {
+    padding: 15px;
+    color: white;
+}
+
+.pret {
+    font-weight: bold;
+    color: #d4af37;
+    font-size: 18px;
+}
+
+.best-seller {
+    background-color: #111;
+}
+
+.badge {
+    background: #d4af37;
+    color: black;
+    padding: 3px 8px;
+    font-size: 11px;
+    border-radius: 15px;
+    margin-left: 8px;
+}
 .preturi {
     width: 100%;
     max-width: 600px;
@@ -197,4 +236,5 @@ footer {
 section {
     background: transparent;
 }
+
 
