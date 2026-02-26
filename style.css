@@ -162,7 +162,7 @@ button:hover {
 
 ..pret-auriu {
     font-weight: 900;
-    font-size: 28px;   /* era 20px */
+    font-size:32px;   /* era 20px */
     letter-spacing: 1px;
     background: linear-gradient(45deg, #d4af37, #ffd700, #b8860b);
     -webkit-background-clip: text;
@@ -183,6 +183,7 @@ button:hover {
     margin-left: 8px;
     font-weight: bold;
 }
+
 
 
 
