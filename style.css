@@ -252,6 +252,60 @@ table.preturi .badge {
         <span class="pret">300 RON</span>
     </div>
 
-</div>
+</div>/* ===== TABEL PREMIUM BLACK & GOLD ===== */
+
+.tabel-premium {
+    width: 100%;
+    max-width: 750px;
+    margin: 40px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #000;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+}
+
+.tabel-premium thead {
+    background: #111;
+}
+
+.tabel-premium th {
+    padding: 20px;
+    font-size: 20px;
+    color: #d4af37;
+    letter-spacing: 1px;
+}
+
+.tabel-premium td {
+    padding: 18px;
+    font-size: 18px;
+    color: white;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.pret-auriu {
+    font-weight: bold;
+    font-size: 20px;
+    background: linear-gradient(45deg, #d4af37, #ffd700, #b8860b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.best-row {
+    background: linear-gradient(90deg, rgba(212,175,55,0.15), rgba(255,215,0,0.08));
+    transform: scale(1.02);
+}
+
+.badge-gold {
+    background: linear-gradient(45deg, #d4af37, #ffd700);
+    color: black;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-left: 8px;
+    font-weight: bold;
+}
+
 
 
