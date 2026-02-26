@@ -180,6 +180,22 @@ Alege un buchet de săpun pentru a dărui un zâmbet care nu se va șterge nicio
 
 </body>
 </html>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "API-KEY-TA",
+  authDomain: "review-florarie.firebaseapp.com",
+  projectId: "review-florarie",
+  storageBucket: "review-florarie.appspot.com",
+  messagingSenderId: "427118254866",
+  appId: "APP-ID-TA"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+</script>
 
 
 
