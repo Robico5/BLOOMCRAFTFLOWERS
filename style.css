@@ -201,3 +201,24 @@ button:hover {
     border-radius: 20px;
     margin-left: 10px;
 }
+/* REVIEW RESPONSIVE TELEFON */
+@media (max-width: 600px) {
+
+  #reviewTable td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #reviewTable td:nth-child(3) {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;   /* maxim 2 randuri */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #reviewTable {
+    font-size: 14px;
+  }
+
+}
