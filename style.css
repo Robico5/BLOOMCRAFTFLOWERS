@@ -129,90 +129,75 @@ button:hover {
 }
 
 .preturi-section {
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #fff5f5, #ffeaea);
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #fff5f5, #ffecec);
     text-align: center;
 }
 
 .preturi-section h2 {
-    font-size: 42px;
+    font-size: 40px;
     color: #8B0000;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
-.preturi-container {
+.tabel-wrapper {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
 }
 
-.card {
+.tabel-modern {
+    width: 100%;
+    max-width: 700px;
+    border-collapse: collapse;
     background: white;
-    padding: 40px 30px;
-    width: 260px;
-    border-radius: 20px;
+    border-radius: 15px;
+    overflow: hidden;
     box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.tabel-modern thead {
+    background: #8B0000;
+    color: white;
+}
+
+.tabel-modern th {
+    padding: 18px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tabel-modern td {
+    padding: 18px;
+    font-size: 17px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.tabel-modern tbody tr {
     transition: 0.3s ease;
-    position: relative;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-}
-
-.card h3 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    color: #333;
+.tabel-modern tbody tr:hover {
+    background: #fff3f3;
+    transform: scale(1.01);
 }
 
 .pret {
-    font-size: 28px;
     font-weight: bold;
     color: #8B0000;
-    margin-bottom: 25px;
+    font-size: 18px;
 }
 
-button {
-    background: #8B0000;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 30px;
-    cursor: pointer;
+.best-row {
+    background: #fff8dc;
     font-weight: bold;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: #b30000;
-}
-
-.recomandat {
-    border: 3px solid gold;
-    transform: scale(1.05);
 }
 
 .badge {
-    position: absolute;
-    top: -12px;
-    right: 20px;
     background: gold;
-    color: #000;
-    padding: 5px 12px;
+    color: black;
+    padding: 4px 10px;
     font-size: 12px;
-    font-weight: bold;
     border-radius: 20px;
+    margin-left: 10px;
 }
-
-.premium {
-    background: linear-gradient(135deg, #fff, #fff0f0);
-}
-
-
-
-
-
-
