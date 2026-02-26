@@ -173,6 +173,62 @@ button:hover {
 .stars span.active {
     color: gold;
 }
-</style>
+</style>/* ===== TABEL PRETURI LUX BLACK & GOLD ===== */
+
+table.preturi {
+    width: 100% !important;
+    max-width: 700px !important;
+    margin: 40px auto !important;
+    border-collapse: collapse !important;
+    background-color: #000 !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5) !important;
+}
+
+table.preturi th {
+    background-color: #111 !important;
+    color: #d4af37 !important;
+    padding: 20px !important;
+    font-size: 20px !important;
+    letter-spacing: 1px !important;
+}
+
+table.preturi td {
+    padding: 18px !important;
+    font-size: 18px !important;
+    color: white !important;
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+table.preturi tr:last-child td {
+    border-bottom: none !important;
+}
+
+/* PRET AURIU */
+table.preturi .pret {
+    font-weight: bold !important;
+    font-size: 20px !important;
+    background: linear-gradient(45deg, #d4af37, #ffd700, #b8860b) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+/* BEST SELLER */
+table.preturi .best-seller {
+    background: linear-gradient(90deg, rgba(212,175,55,0.15), rgba(255,215,0,0.08)) !important;
+    transform: scale(1.03);
+}
+
+table.preturi .badge {
+    background: linear-gradient(45deg, #d4af37, #ffd700) !important;
+    color: black !important;
+    font-size: 12px !important;
+    padding: 4px 10px !important;
+    border-radius: 20px !important;
+    margin-left: 8px !important;
+    font-weight: bold !important;
+}
+
 
 
