@@ -189,11 +189,9 @@ const firebaseConfig = {
   messagingSenderId: "427118254866",
   appId: "APP-ID-TA"
 };
-
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 </script>
-</body>
 async function showReviews() {
   let table = document.getElementById("reviewTable");
 
@@ -218,9 +216,6 @@ async function showReviews() {
     `;
   });
 }
-
-
-
 
 
 
